@@ -10,9 +10,6 @@ package DAO;
  * @author Joshua
  */
 public class Tiempo implements IDAO {
-        double Tt;
-        double CGt;
-        double CLt;
 
 
     /**
@@ -24,8 +21,7 @@ public class Tiempo implements IDAO {
      **/
     @Override
     public double Total(double x, double y, double z) {
-        this.Tt = x + y + z;
-        return this.Tt;
+        return x + y + z;
     }
     
       /**
@@ -37,8 +33,7 @@ public class Tiempo implements IDAO {
      **/
     @Override
     public double CostoShiftingGlobal(double x, double y, double z) {
-        this.CGt = z - ((x - y) / 2);
-        return this.CGt;
+        return (z - ((x - y) / 2));
     }
  
     /**
@@ -49,7 +44,7 @@ public class Tiempo implements IDAO {
      **/
     @Override
     public double CostoShiftingLocal(double x, double y) {
-    this.CLt = x - y;
-        return this.CLt;
+    return x - y;
+        
     }
 }

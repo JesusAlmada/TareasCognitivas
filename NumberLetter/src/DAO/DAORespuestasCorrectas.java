@@ -11,32 +11,6 @@ package DAO;
  */
 public class DAORespuestasCorrectas implements IDAO, ITiempoReaccion {
 
-    double TCt;
-    double CGc;
-    double CLc;
-    double RCt;
-    double TPl;
-    double TPn;
-    double TPa;
-    double TPt;
-    double CGp;
-    double TPi;
-    double TPp;
-    double CLp;
-
-    double TCat;
-    double CGac;
-    double CLac;
-    double RCat;
-    double TPal;
-    double TPan;
-    double TPaa;
-
-    double TPat;
-    double CGap;
-    double TPai;
-    double CLap;
-
     /**
      * este metodo calcula el tiempo total de las respuestass correctas en toda
      * la tarea
@@ -52,8 +26,8 @@ public class DAORespuestasCorrectas implements IDAO, ITiempoReaccion {
      */
     @Override
     public double Total(double x, double y, double z) {
-        this.TCt = x + y + z;
-        return TCt;
+        return x + y + z;
+        
     }
 
     /**
@@ -72,8 +46,8 @@ public class DAORespuestasCorrectas implements IDAO, ITiempoReaccion {
      */
     @Override
     public double CostoShiftingGlobal(double x, double y, double z) {
-        this.CGc = z - ((x + y) / 2);
-        return this.CGc;
+        return(z - ((x + y) / 2));
+        
     }
 
     /**
@@ -90,11 +64,11 @@ public class DAORespuestasCorrectas implements IDAO, ITiempoReaccion {
      */
     @Override
     public double CostoShiftingLocal(double x, double y) {
-        this.CLc = x - y;
-        return this.CLc;
+        return x - y;
+        
     }
 
-    /*
+    /**
     *este metodo calcula las respuestas correctas en toda la tarea
     *@param x respuestas correctas en el bloque de solo letras
     *@param y respuestas correctas en el bloque de solo numeros
@@ -103,8 +77,8 @@ public class DAORespuestasCorrectas implements IDAO, ITiempoReaccion {
      **/
     @Override
     public double RespuestasTotalTarea(double x, double y, double z) {
-        this.RCt = x + y + z;
-        return this.RCt;
+        return x + y + z;
+        
     }
 
     /**
@@ -120,8 +94,8 @@ public class DAORespuestasCorrectas implements IDAO, ITiempoReaccion {
      */
     @Override
     public double TiempoReaccionPromedioBloqueLetras(double x, double y) {
-        this.TPl = x / y;
-        return this.TPl;
+        return  (x / y);
+        
     }
 
     /**
@@ -137,8 +111,8 @@ public class DAORespuestasCorrectas implements IDAO, ITiempoReaccion {
      */
     @Override
     public double TiempoReaccionPromedioBloqueNumeros(double x, double y) {
-        this.TPn = x / y;
-        return this.TPn;
+        return (x / y);
+        
     }
 
     /**
@@ -154,8 +128,7 @@ public class DAORespuestasCorrectas implements IDAO, ITiempoReaccion {
      */
     @Override
     public double TiempoReaccionPromedioBloqueAlterno(double x, double y) {
-        this.TPa = x / y;
-        return this.TPa;
+        return (x / y);
     }
 
     /**
@@ -170,11 +143,10 @@ public class DAORespuestasCorrectas implements IDAO, ITiempoReaccion {
      */
     @Override
     public double TiempoReaccionPromedioTodaTarea(double x, double y) {
-        this.TPt = x / y;
-        return this.TPt;
+        return  (x / y);
     }
 
-    /*
+    /**
     este metodo calcula el costo de shifting global con el tiempo de reaccion promedio de las respuestas correctas
     @param z tiempo de reaccion promedio de las respuestas correctas del bloque alternado
     @param x tiempo de reaccion promedio de las respuestas correctas del bloque de solo letras
@@ -183,8 +155,8 @@ public class DAORespuestasCorrectas implements IDAO, ITiempoReaccion {
      */
     @Override
     public double CostoShiftingGlobalTiempoReaccion(double x, double y, double z) {
-        this.CGp = z - ((x + y) / 2);
-        return CGp;
+        return  (z - ((x + y) / 2));
+       
     }
 
     /**
@@ -201,8 +173,7 @@ public class DAORespuestasCorrectas implements IDAO, ITiempoReaccion {
      */
     @Override
     public double TiempoReaccionPromedioCuadranteImparAlternado(double x, double y) {
-        this.TPi = x / y;
-        return this.TPi;
+        return (x / y);
     }
 
     /**
@@ -218,8 +189,7 @@ public class DAORespuestasCorrectas implements IDAO, ITiempoReaccion {
      */
     @Override
     public double TiempoReaccionPromedioCuadranteParAlternado(double x, double y) {
-        this.TPp = x / y;
-        return TPp;
+         return(x / y);
     }
 
     /**
@@ -236,8 +206,7 @@ public class DAORespuestasCorrectas implements IDAO, ITiempoReaccion {
      */
     @Override
     public double CostoShiftingLocalTiempoReaccion(double x, double y) {
-        this.CLp = x - y;
-        return this.CLp;
+        return (x - y);
     }
 
     // con todas las respuestas sin distincion entre errores y aciertos descartando aquellas superiores e 
@@ -255,8 +224,7 @@ public class DAORespuestasCorrectas implements IDAO, ITiempoReaccion {
      *
      */
     public double TieTotResCorrTodTar(double tcal, double tcan, double tcaa) {
-        this.TCat = tcal + tcan + tcaa;
-        return this.TCat;
+        return tcal + tcan + tcaa;
     }
 
     /**
@@ -274,8 +242,7 @@ public class DAORespuestasCorrectas implements IDAO, ITiempoReaccion {
      *
      */
     public double CosShiftGlobTieTotResCorr(double tcaa, double tcal, double tcan) {
-        this.CGac = tcaa - ((tcal + tcan) / 2);
-        return this.CGac;
+        return ( tcaa - ((tcal + tcan) / 2));
     }
 
     /**
@@ -289,8 +256,7 @@ public class DAORespuestasCorrectas implements IDAO, ITiempoReaccion {
      *
      */
     public double CosShiftLocTieTotResCorr(double tai, double tap) {
-        this.CLac = tai - tap;
-        return this.CLac;
+        return tai - tap;
     }
 
     /**
@@ -303,8 +269,7 @@ public class DAORespuestasCorrectas implements IDAO, ITiempoReaccion {
      *
      */
     public double RespCorrTodTar(double rcal, double rcan, double rcaa) {
-        this.RCat = rcal + rcan + rcaa;
-        return this.RCat;
+        return rcal + rcan + rcaa;
     }
 
     /**
@@ -319,8 +284,7 @@ public class DAORespuestasCorrectas implements IDAO, ITiempoReaccion {
      *
      */
     public double tieReacPromResCorrBloqLet(double tcal, double rcal) {
-        this.TPal = tcal / rcal;
-        return this.TPal;
+        return tcal / rcal;
     }
 
     /**
@@ -335,8 +299,7 @@ public class DAORespuestasCorrectas implements IDAO, ITiempoReaccion {
     *
      */
     public double TieReacPromResCorrBloqNum(double tcan, double rcan) {
-        this.TPan = tcan / rcan;
-        return this.TPan;
+        return tcan / rcan;
     }
 
     /**
@@ -351,8 +314,7 @@ public class DAORespuestasCorrectas implements IDAO, ITiempoReaccion {
      *
      */
     public double TieReacPomResCorrBloqAlt(double tcaa, double rcaa) {
-        this.TPaa = tcaa / rcaa;
-        return this.TPaa;
+        return tcaa / rcaa;
     }
 
     /**
@@ -367,8 +329,8 @@ public class DAORespuestasCorrectas implements IDAO, ITiempoReaccion {
      *
      */
     public double TieReacPromResCorrTodTar(double tcat, double rcat) {
-        this.TPat = tcat / rcat;
-        return this.TPat;
+        return tcat / rcat;
+        
     }
 
     /**
@@ -386,8 +348,8 @@ public class DAORespuestasCorrectas implements IDAO, ITiempoReaccion {
      *
      */
     public double CosShiftGlobTieReaPromResCorr(double tpaa, double tpal, double tpan) {
-        this.CGap = tpaa - ((tpal + tpan) / 2);
-        return this.CGap;
+        return tpaa - ((tpal + tpan) / 2);
+        
     }
 
     /**
@@ -403,8 +365,8 @@ public class DAORespuestasCorrectas implements IDAO, ITiempoReaccion {
      *
      */
     public double TieReaPromResCorrCuadImpBloqAlt(double tcai, double rcai) {
-        this.TPai = tcai / rcai;
-        return this.TPai;
+        return tcai / rcai;
+        
     }
 
     /**
@@ -420,8 +382,8 @@ public class DAORespuestasCorrectas implements IDAO, ITiempoReaccion {
      *
      */
     public double CosShiftLocTieReaPromResCorr(double tpai, double tpap) {
-        this.CLap = tpai - tpap;
-        return this.CLap;
+        return tpai - tpap;
+        
     }
 
 }
