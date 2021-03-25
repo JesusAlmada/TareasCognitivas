@@ -7,7 +7,6 @@ package vistas;
 
 import Negocio.estimulos;
 import Modelos.*;
-import DAO.*;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import javax.swing.Timer;
