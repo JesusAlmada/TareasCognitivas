@@ -12,7 +12,7 @@ package Vistas;
 public class Instrucciones3 extends javax.swing.JFrame {
 
     /**
-     * Creates new form Instrucciones
+     * Creates new form Instrucciones3
      */
     public Instrucciones3() {
         initComponents();
@@ -61,7 +61,7 @@ public class Instrucciones3 extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         pack();
@@ -92,7 +92,6 @@ public class Instrucciones3 extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Instrucciones3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
